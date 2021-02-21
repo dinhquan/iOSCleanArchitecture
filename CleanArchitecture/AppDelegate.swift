@@ -10,27 +10,44 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        setUpRootView()
+        configUI()
+
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    private func setUpRootView() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = Storyboard.load(.main, type: UINavigationController.self, isInitial: true)
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        let articleNavigator = ArticleNavigator(navigationController: navigationController)
+        articleNavigator.showArticles()
+
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+
+        self.window = window
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    private func configUI() {
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
+
+        UINavigationBar.appearance().barTintColor = Color.main
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
-
-
 }
 
+extension Resolver: ResolverRegistering {
+    public static func registerAllServices() {
+        register {
+            ArticleRepository() as ArticleUseCase
+        }
+    }
+}
