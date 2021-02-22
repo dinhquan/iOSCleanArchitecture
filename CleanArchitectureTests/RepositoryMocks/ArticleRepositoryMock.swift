@@ -21,6 +21,6 @@ struct ArticleRepositoryMock: ArticleUseCase {
         
         return MockLoader
             .load(returnType: SearchArticleResult.self, file: "searchArticles.json")
-            .map { $0.articles ?? [] }
+            .map { $0.articles }
     }
 }

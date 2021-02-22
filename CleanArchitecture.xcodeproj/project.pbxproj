@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1463DD1C25E36E82004BEE4F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1463DD1B25E36E82004BEE4F /* RxTest */; };
 		1463DD2125E36E96004BEE4F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1463DD2025E36E96004BEE4F /* RxBlocking */; };
+		1463DD2625E38CAB004BEE4F /* CodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463DD2525E38CAB004BEE4F /* CodableDefault.swift */; };
 		F4E2BDC725E2B7B600F7A304 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4E2BDC625E2B7B600F7A304 /* Alamofire */; };
 		F4E2BDCD25E2B9A100F7A304 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F4E2BDCC25E2B9A100F7A304 /* Kingfisher */; };
 		F4E2BE0225E2BA1600F7A304 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDD825E2BA1600F7A304 /* ArticleListViewController.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1463DD2525E38CAB004BEE4F /* CodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDefault.swift; sourceTree = "<group>"; };
 		F4E2BDD825E2BA1600F7A304 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		F4E2BDD925E2BA1600F7A304 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		F4E2BDDB25E2BA1600F7A304 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		F4E2BE0025E2BA1600F7A304 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				1463DD2525E38CAB004BEE4F /* CodableDefault.swift */,
 				F4E2BE0125E2BA1600F7A304 /* Article.swift */,
 			);
 			path = Entities;
@@ -584,6 +587,7 @@
 				F4E2BE1825E2BA1600F7A304 /* ArticleService.swift in Sources */,
 				F4E2BE1025E2BA1600F7A304 /* Toast.swift in Sources */,
 				F4E2BE0A25E2BA1600F7A304 /* UITableView+Rx.swift in Sources */,
+				1463DD2625E38CAB004BEE4F /* CodableDefault.swift in Sources */,
 				F4E2BE0825E2BA1600F7A304 /* ArticleNavigator.swift in Sources */,
 				F4E2BE0C25E2BA1600F7A304 /* Resolver.swift in Sources */,
 				F4E2BE1225E2BA1600F7A304 /* ActivityIndicator.swift in Sources */,

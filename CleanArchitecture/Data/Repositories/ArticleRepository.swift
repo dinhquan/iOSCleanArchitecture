@@ -8,8 +8,8 @@
 import RxSwift
 
 struct SearchArticleResult: Decodable {
-    var articles: [Article]?
-    var totalResults: Int?
+    @Default.EmptyList var articles: [Article]
+    @Default.Zero var totalResults: Int
 }
 
 struct ArticleRepository: ArticleUseCase {
@@ -17,6 +17,6 @@ struct ArticleRepository: ArticleUseCase {
         return ArticleService
             .searchArticlesByKeyword(q: keyword, pageSize: pageSize, page: page)
             .request(returnType: SearchArticleResult.self)
-            .map { $0.articles ?? [] }
+            .map { $0.articles }
     }
 }

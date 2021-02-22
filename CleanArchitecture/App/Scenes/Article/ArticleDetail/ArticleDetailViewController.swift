@@ -25,8 +25,8 @@ final class ArticleDetailViewController: UIViewController {
         title = article.title
         titleLabel.text = article.title
         descriptionLabel.text = article.description
-        timeLabel.text = article.formattedPublishAt
-        if let url = URL(string: article.urlToImage ?? "") {
+        timeLabel.text = article.formattedPublishedAt
+        if let url = URL(string: article.urlToImage) {
             thumbnailImageView.kf.setImage(with: url)
         }
     }
