@@ -42,7 +42,7 @@ struct ArticleListViewModel: ViewModelProtocol {
                 currentPage.accept(1)
             })
 
-        let activityTracker = ActivityTracker()
+        let activityTracker = ActivityIndicator()
         let errorTracker = ErrorTracker()
 
         Observable.merge(search, loadMore)

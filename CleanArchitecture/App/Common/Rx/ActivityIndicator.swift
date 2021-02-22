@@ -1,5 +1,5 @@
 //
-//  ActivityTracker.swift
+//  ActivityIndicator.swift
 //  NewsApp
 //
 //  Created by Dinh Quan on 2/5/21.
@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-public class ActivityTracker: SharedSequenceConvertibleType {
+public class ActivityIndicator: SharedSequenceConvertibleType {
     public typealias Element = Bool
     public typealias SharingStrategy = DriverSharingStrategy
 
@@ -51,7 +51,7 @@ public class ActivityTracker: SharedSequenceConvertibleType {
 }
 
 extension ObservableConvertibleType {
-    public func trackActivity(_ activityTracker: ActivityTracker) -> Observable<Element> {
-        return activityTracker.trackActivityOfObservable(self)
+    public func trackActivity(_ activityIndicator: ActivityIndicator) -> Observable<Element> {
+        return activityIndicator.trackActivityOfObservable(self)
     }
 }

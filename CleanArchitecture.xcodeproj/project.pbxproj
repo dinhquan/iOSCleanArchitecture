@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1463DD1C25E36E82004BEE4F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1463DD1B25E36E82004BEE4F /* RxTest */; };
+		1463DD2125E36E96004BEE4F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1463DD2025E36E96004BEE4F /* RxBlocking */; };
 		F4E2BDC725E2B7B600F7A304 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4E2BDC625E2B7B600F7A304 /* Alamofire */; };
 		F4E2BDCD25E2B9A100F7A304 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F4E2BDCC25E2B9A100F7A304 /* Kingfisher */; };
 		F4E2BE0225E2BA1600F7A304 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDD825E2BA1600F7A304 /* ArticleListViewController.swift */; };
@@ -25,7 +27,7 @@
 		F4E2BE0F25E2BA1600F7A304 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDEA25E2BA1600F7A304 /* Loading.swift */; };
 		F4E2BE1025E2BA1600F7A304 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDEB25E2BA1600F7A304 /* Toast.swift */; };
 		F4E2BE1125E2BA1600F7A304 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDED25E2BA1600F7A304 /* ErrorTracker.swift */; };
-		F4E2BE1225E2BA1600F7A304 /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDEE25E2BA1600F7A304 /* ActivityTracker.swift */; };
+		F4E2BE1225E2BA1600F7A304 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDEE25E2BA1600F7A304 /* ActivityIndicator.swift */; };
 		F4E2BE1325E2BA1600F7A304 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDF025E2BA1600F7A304 /* ViewModelType.swift */; };
 		F4E2BE1425E2BA1600F7A304 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDF225E2BA1600F7A304 /* Color.swift */; };
 		F4E2BE1525E2BA1600F7A304 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDF525E2BA1600F7A304 /* Config.swift */; };
@@ -85,7 +87,7 @@
 		F4E2BDEA25E2BA1600F7A304 /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		F4E2BDEB25E2BA1600F7A304 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F4E2BDED25E2BA1600F7A304 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
-		F4E2BDEE25E2BA1600F7A304 /* ActivityTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
+		F4E2BDEE25E2BA1600F7A304 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F4E2BDF025E2BA1600F7A304 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		F4E2BDF225E2BA1600F7A304 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F4E2BDF525E2BA1600F7A304 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -117,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1463DD1C25E36E82004BEE4F /* RxTest in Frameworks */,
+				1463DD2125E36E96004BEE4F /* RxBlocking in Frameworks */,
 				F4ECBED525E2B61F0054DD81 /* RxRelay in Frameworks */,
 				F4E2BDCD25E2B9A100F7A304 /* Kingfisher in Frameworks */,
 				F4ECBED725E2B61F0054DD81 /* RxCocoa in Frameworks */,
@@ -144,6 +148,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1463DD0C25E36E3C004BEE4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4E2BDD425E2BA1600F7A304 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E2BDED25E2BA1600F7A304 /* ErrorTracker.swift */,
-				F4E2BDEE25E2BA1600F7A304 /* ActivityTracker.swift */,
+				F4E2BDEE25E2BA1600F7A304 /* ActivityIndicator.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -367,6 +378,7 @@
 				F4ECBEAF25E2A0730054DD81 /* CleanArchitectureTests */,
 				F4ECBEBA25E2A0730054DD81 /* CleanArchitectureUITests */,
 				F4ECBE9725E2A0720054DD81 /* Products */,
+				1463DD0C25E36E3C004BEE4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -439,6 +451,8 @@
 				F4E2BDCC25E2B9A100F7A304 /* Kingfisher */,
 				F4E2BE2325E2BAA600F7A304 /* Differentiator */,
 				F4E2BE2525E2BAA600F7A304 /* RxDataSources */,
+				1463DD1B25E36E82004BEE4F /* RxTest */,
+				1463DD2025E36E96004BEE4F /* RxBlocking */,
 			);
 			productName = CleanArchitecture;
 			productReference = F4ECBE9625E2A0720054DD81 /* CleanArchitecture.app */;
@@ -458,6 +472,8 @@
 				F4ECBEAE25E2A0730054DD81 /* PBXTargetDependency */,
 			);
 			name = CleanArchitectureTests;
+			packageProductDependencies = (
+			);
 			productName = CleanArchitectureTests;
 			productReference = F4ECBEAC25E2A0730054DD81 /* CleanArchitectureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -570,7 +586,7 @@
 				F4E2BE0A25E2BA1600F7A304 /* UITableView+Rx.swift in Sources */,
 				F4E2BE0825E2BA1600F7A304 /* ArticleNavigator.swift in Sources */,
 				F4E2BE0C25E2BA1600F7A304 /* Resolver.swift in Sources */,
-				F4E2BE1225E2BA1600F7A304 /* ActivityTracker.swift in Sources */,
+				F4E2BE1225E2BA1600F7A304 /* ActivityIndicator.swift in Sources */,
 				F4E2BE0D25E2BA1600F7A304 /* Storyboard.swift in Sources */,
 				F4E2BE1125E2BA1600F7A304 /* ErrorTracker.swift in Sources */,
 				F4E2BE1725E2BA1600F7A304 /* RestAPI.swift in Sources */,
@@ -766,6 +782,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -784,6 +801,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -953,6 +971,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1463DD1B25E36E82004BEE4F /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4ECBECF25E2B61F0054DD81 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		1463DD2025E36E96004BEE4F /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4ECBECF25E2B61F0054DD81 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
 		F4E2BDC625E2B7B600F7A304 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4E2BDC525E2B7B600F7A304 /* XCRemoteSwiftPackageReference "Alamofire" */;
