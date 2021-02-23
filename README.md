@@ -126,3 +126,83 @@ final class ArticleListViewController: UIViewController {
     .....
 ```
 
+## Testing
+### What to test
+In this architecture **ViewModels**, **UseCases** and **Entities** (if they contains business logic) can be tested.
+
+### ViewModel tests
+To test the ViewModel you should have the RepositoryMock
+```swift
+struct ArticleRepositoryMock: ArticleUseCase {
+    func findArticlesByKeyword(_ keyword: String, pageSize: Int, page: Int) -> Single<[Article]> {
+        return MockLoader
+            .load(returnType: SearchArticleResult.self, file: "searchArticles.json")
+            .map { $0.articles }
+    }
+}
+```
+
+```swift
+typealias ViewModel = ArticleListViewModel
+
+class ArticleListViewModelTests: XCTestCase {
+
+    var testScheduler: TestScheduler!
+    var viewModel: ViewModel!
+    let bag = DisposeBag()
+
+    override func setUpWithError() throws {
+        testScheduler = TestScheduler(initialClock: 0)
+        viewModel = ArticleListViewModel()
+        viewModel.articleUseCase = ArticleRepositoryMock()
+    }
+
+    override func tearDownWithError() throws {}
+
+    func test_searchWithKeyword() throws {
+        // Given
+        let search = testScheduler
+            .createHotObservable([
+                .next(0, "Tesla")
+            ])
+            .asObservable()
+        let input = ViewModel.Input(search: search, loadMore: .never())
+        let output = viewModel.transform(input: input)
+
+        // When
+        testScheduler.start()
+        let articles = try! output.tableData.articles.toBlocking().first()!
+
+        // Then
+        XCTAssertEqual(articles.count, 20)
+        XCTAssertEqual(articles[1].author, "Mike Murphy")
+    }
+
+    func test_loadMore() throws {
+        // Given
+        let search = testScheduler
+            .createHotObservable([
+                .next(0, "Tesla")
+            ])
+            .asObservable()
+        let loadMore = testScheduler
+            .createHotObservable([
+                .next(2, ())
+            ])
+            .asObservable()
+        let input = ViewModel.Input(search: search, loadMore: loadMore)
+        let output = viewModel.transform(input: input)
+
+        // When
+        testScheduler.start()
+        let articles = try! output.tableData.articles.toBlocking().first()!
+        
+        // Then
+        XCTAssertEqual(articles.count, 40)
+    }
+```
+
+## Code generator
+The clean architecture, MVVM or VIPER will create a lot of files when you start a new module. So using a code generator is the smart way to save time.
+
+[codegen](https://github.com/dinhquan/codegen) is a great tool to do it.
