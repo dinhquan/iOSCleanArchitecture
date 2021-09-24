@@ -10,6 +10,7 @@
 		1463DD1C25E36E82004BEE4F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1463DD1B25E36E82004BEE4F /* RxTest */; };
 		1463DD2125E36E96004BEE4F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1463DD2025E36E96004BEE4F /* RxBlocking */; };
 		1463DD2625E38CAB004BEE4F /* CodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463DD2525E38CAB004BEE4F /* CodableDefault.swift */; };
+		147E75F825E77957001C9FE6 /* a.html in Resources */ = {isa = PBXBuildFile; fileRef = 147E75F725E77957001C9FE6 /* a.html */; };
 		F4E2BDC725E2B7B600F7A304 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4E2BDC625E2B7B600F7A304 /* Alamofire */; };
 		F4E2BDCD25E2B9A100F7A304 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F4E2BDCC25E2B9A100F7A304 /* Kingfisher */; };
 		F4E2BE0225E2BA1600F7A304 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BDD825E2BA1600F7A304 /* ArticleListViewController.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		1463DD2525E38CAB004BEE4F /* CodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDefault.swift; sourceTree = "<group>"; };
+		147E75F725E77957001C9FE6 /* a.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = a.html; sourceTree = "<group>"; };
 		F4E2BDD825E2BA1600F7A304 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		F4E2BDD925E2BA1600F7A304 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		F4E2BDDB25E2BA1600F7A304 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E2BDE625E2BA1600F7A304 /* Resolver.swift */,
+				147E75F725E77957001C9FE6 /* a.html */,
 				F4E2BDE725E2BA1600F7A304 /* Storyboard.swift */,
 				F4E2BDE825E2BA1600F7A304 /* Views */,
 				F4E2BDEC25E2BA1600F7A304 /* Rx */,
@@ -552,6 +555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147E75F825E77957001C9FE6 /* a.html in Resources */,
 				F4E2BE1625E2BA1600F7A304 /* searchArticles.json in Resources */,
 				F4ECBEA625E2A0730054DD81 /* LaunchScreen.storyboard in Resources */,
 				F4E2BE0725E2BA1600F7A304 /* Article.storyboard in Resources */,
@@ -786,8 +790,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C25B7N258R;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -805,8 +811,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C25B7N258R;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

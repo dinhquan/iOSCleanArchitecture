@@ -11,14 +11,6 @@ import RxSwift
 
 struct ArticleRepositoryMock: ArticleUseCase {
     func findArticlesByKeyword(_ keyword: String, pageSize: Int, page: Int) -> Single<[Article]> {
-        if page > 3 {
-            return Single.create { single in
-                let responseError = ResponseError(type: .af, error: nil, afError: nil)
-                single(.failure(responseError))
-                return Disposables.create()
-            }
-        }
-        
         return MockLoader
             .load(returnType: SearchArticleResult.self, file: "searchArticles.json")
             .map { $0.articles }

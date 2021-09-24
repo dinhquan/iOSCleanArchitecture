@@ -9,12 +9,7 @@ import UIKit
 
 struct Toast {
     static func show(_ text: String, duration: Double = 2) {
-        let keyWindow = UIApplication.shared.connectedScenes
-                .filter({$0.activationState == .foregroundActive})
-                .map({$0 as? UIWindowScene})
-                .compactMap({$0})
-                .first?.windows
-                .filter({$0.isKeyWindow}).first
+        let keyWindow = UIApplication.shared.keyWindow
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
         view.backgroundColor = UIColor(white: 0, alpha: 0.75)
